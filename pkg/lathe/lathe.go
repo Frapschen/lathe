@@ -23,6 +23,7 @@ func NewApp(m *config.Manifest) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:          m.CLI.Name,
 		Short:        m.CLI.Short,
+		Long:         agentHint(m.CLI.Name, m.CLI.Short),
 		SilenceUsage: true,
 	}
 	cmd.PersistentFlags().String("hostname", "", fmt.Sprintf("Server hostname (overrides $%s)", m.CLI.HostEnv))
@@ -42,4 +43,19 @@ func NewApp(m *config.Manifest) *cobra.Command {
 	cmd.AddCommand(searchCmd(m))
 	cmd.AddCommand(versionCmd())
 	return cmd
+}
+
+// agentHint surfaces the catalog protocol in `<cli> --help` so agents
+// discover it without any preinstalled SKILL file.
+func agentHint(name, short string) string {
+	if short == "" {
+		short = name
+	}
+	return fmt.Sprintf(`%s
+
+For agents:
+  %s commands --json           machine-readable command catalog
+  %s commands show <path...>   precise spec for one command
+  %s search "<intent>"         find commands by keyword
+`, short, name, name, name)
 }
