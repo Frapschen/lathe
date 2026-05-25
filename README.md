@@ -354,4 +354,4 @@ See [SECURITY.md](SECURITY.md) for private vulnerability disclosure.
 
 ## License
 
-[MIT](LICENSE) (c) samzong
+[MIT](LICENSE) (c) lathe-cli

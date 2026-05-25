@@ -23,7 +23,7 @@ Project maintainers are responsible for clarifying and enforcing standards of ac
 
 Report Code of Conduct concerns privately to the maintainer:
 
-- GitHub: https://github.com/samzong
+- GitHub: https://github.com/lathe-cli
 
 Security vulnerabilities should not be reported through this process. Follow `SECURITY.md` for vulnerability reports.
 

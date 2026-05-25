@@ -12,7 +12,7 @@ Please **do not** open a public GitHub issue for a vulnerability. Use GitHub's p
 2. Describe the issue with enough detail to reproduce: the spec, the command, and the impact you observed.
 3. Expect a first response within 7 days.
 
-If private advisories are disabled or unreachable, DM the maintainer on GitHub (`@samzong`) to arrange a private channel.
+If private advisories are disabled or unreachable, DM the maintainer on GitHub (`@lathe-cli`) to arrange a private channel.
 
 ## Scope
 

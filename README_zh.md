@@ -341,4 +341,4 @@ Lathe 分两步工作：
 
 ## 许可证
 
-[MIT](LICENSE) (c) samzong
+[MIT](LICENSE) (c) lathe-cli
